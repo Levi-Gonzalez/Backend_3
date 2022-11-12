@@ -21,12 +21,17 @@ class Contenedor {
             console.log(e);
         }
     }
-    async getById(){
+    async getById(id){
         try {
-            const leer = await this.fs.promises.readFile(this.path, 'utf-8')
-            return JSON.parse(leer)
-        } catch (error) {
-            return [];
+            const leer = await fs.readFile(this.path, "utf-8");
+            const data = JSON.parse(leer)
+            const obj = data.find(obj =>obj.id == id)
+            if(!obj){
+                return null
+            }
+            return obj
+        } catch (e) {
+            console.log(e);
         }
     }
     async getAll(){

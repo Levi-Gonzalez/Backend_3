@@ -1,21 +1,23 @@
 const express = require ("express")
-const classContenedor = require("./container/archivos.Container")
+const classContainer = require("./container/archivos.Conteiner")
 
 
 const app = express();
 
 const PORT = 8070
 
-const archivo = new classContenedor('./productos.txt')
+const archivo = new classContainer('productos.txt')
 
 app.get('/productos', async (req, res)=>{
-    const productos = await archivo.getById()
+    const productos = await archivo.getAll()
     console.log(productos);
-    res.send({ Productos : 'lista de productos' })
+    res.send({ Productos: productos })
 })
 
-app.get('/random', (req,res)=>{
-    res.send({ Productos : 'productos random'})
+app.get('/random', async (req,res)=>{
+    const productos = await archivo.getAll()
+    const random = parseInt(Math.random() * productos.length)
+    res.send({ Productos: productos[random]})
 })
 
 const server = app.listen(PORT, () => {

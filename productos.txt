@@ -1,3 +1,12 @@
-[{"tittle":"Escuadra","price":125,"thumbnail":"google.com","id":1},
-{"tittle":"Lapiz","price":50,"thumbnail":"google.com","id":2},
-{"tittle":"Regla","price":150,"thumbnail":"google.com","id":3}]
+[{"tittle":"Camiseta seleccion Argentina",
+"price":10000,
+"thumbnail":"https://media.tycsports.com/files/2022/07/08/449738/messi-camiseta-nueva-seleccion_w862.webp",
+"id":1},
+{"tittle":"Short seleccion Argentina",
+"price":5000,
+"thumbnail":"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d5b150d435154678abb6ae980099c5ff_9366/Short_Titular_Argentina_22_Negro_HB9216_21_model.jpg",
+"id":2},
+{"tittle":"Medias seleccion Argentina",
+"price":3000,
+"thumbnail":"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e25cb3a035e740f3a220aed201047ac1_9366/Medias_Uniforme_Titular_Argentina_22_Blanco_HB9207_03_standard.jpg",
+"id":3}]
